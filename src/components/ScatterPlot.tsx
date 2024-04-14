@@ -49,10 +49,10 @@ const ScatterPlot: React.FC = () => {
 
     const legendItems = legend
       .selectAll<SVGGElement, string>('g')
-      .data(data.map((d) => d.product))
+      .data(data.map((_d) => _d.product))
       .enter()
       .append('g')
-      .attr('transform', (d, i) => `translate(0, ${i * 20})`);
+      .attr('transform', (_d, i) => `translate(0, ${i * 20})`);
 
     legendItems
       .append('circle')
